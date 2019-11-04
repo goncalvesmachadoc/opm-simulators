@@ -670,7 +670,6 @@ namespace MissingFeatures {
             "WNETCTRL",
             "WNETDP",
             "WORKTHP",
-            "WPAVE",
             "WPIMULTL",
             "WPITAB",
             "WPLUG",
