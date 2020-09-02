@@ -627,11 +627,13 @@ public:
              std::shared_ptr<Miscibility::RsFunction> rs,
              std::shared_ptr<Miscibility::RsFunction> rv,
              const TabulatedFunction& saltVdTable,
+             const TabulatedFunction& saltpVdTable,
              const int pvtIdx)
         : rec_    (rec)
         , rs_     (rs)
         , rv_     (rv)
         , saltVdTable_ (saltVdTable)
+        , saltpVdTable_ (saltpVdTable)
         , pvtIdx_ (pvtIdx)
     {}
 
@@ -707,6 +709,9 @@ public:
 
     const TabulatedFunction&
     saltVdTable() const { return saltVdTable_;}
+
+    const TabulatedFunction&
+    saltpVdTable() const { return saltpVdTable_;}
     /**
      * Retrieve pvtIdx of the region.
      */
@@ -717,6 +722,7 @@ private:
     std::shared_ptr<Miscibility::RsFunction> rs_;      /**< RS calculator */
     std::shared_ptr<Miscibility::RsFunction> rv_;      /**< RV calculator */
     const TabulatedFunction& saltVdTable_;
+    const TabulatedFunction& saltpVdTable_;
     const int pvtIdx_;
 };
 

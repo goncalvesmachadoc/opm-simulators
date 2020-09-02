@@ -1765,6 +1765,7 @@ public:
 
         if (enableBrine)
             values[Indices::saltConcentrationIdx] = initialFluidStates_[globalDofIdx].saltConcentration();
+            values[Indices::saltSaturationIdx] = initialFluidStates_[globalDofIdx].saltSaturation();
 
         values.checkDefined();
     }
